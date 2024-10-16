@@ -1,0 +1,20 @@
+# 证书在 webase-deploy/nodes/127.0.0.1/sdk
+
+[Network]
+Type="channel"
+CAFile="config/fisco-bcos-config/ca.crt" # 证书需要修改
+Cert="config/fisco-bcos-config/sdk.crt"  # 证书需要修改
+Key="config/fisco-bcos-config/sdk.key"   # 证书需要修改
+[[Network.Connection]]
+NodeURL="127.0.0.1:20200" # 修改为webase地址
+GroupID=1
+# [[Network.Connection]]
+# NodeURL="127.0.0.1:20200"
+# GroupID=2
+
+[Account]
+KeyFile="config/accounts/0x2444132a900b9cc20566debc17a60648ab3584d1.pem" # 账号也需要修改 通过console getAccount.sh 会提供一个用户的公钥以及私钥
+
+[Chain]
+ChainID=1
+SMCrypto=false
